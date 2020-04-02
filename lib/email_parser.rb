@@ -16,6 +16,7 @@ class EmailAddressParser
     
     #parse email list 
     def parse
+        # writing emailList refers to the method that reads "emails", if you use @emailList, you are directly acessing the instance variable 
         emailList.split(/, | /).uniq
     end
 
