@@ -50,11 +50,12 @@ class EmailAddressParser
         @unformatted_emails_addresses = unformatted_emails_addresses
     end 
 # this is the meat of the method we want - parse 
-#take unformatted_email _addresses and delete the commas in between email addresses.
+#take unformatted_email _address
 #perform .split method on a string and set each word - email address- as an element of an array
+(/, | /) specifies to tkae out any commas or spaces in between
 #take out any duplicates.    
     def parse
-        unformatted_email_addresses.delete(',').split.uniq 
+         unformatted_email_addresses.split(/, | /).uniq
     end
 
 end 
