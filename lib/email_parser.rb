@@ -7,14 +7,14 @@ class EmailAddressParser
 
     end 
     def parse
-        unformatted_email_addresses.delete(',').split.uniq 
+        unformatted_email_addresses.split(/, | /).uniq
     end
 
 end 
 
 
 =begin
-ORIGINAL PROMPT BELOW. NO CODE STURCTURE TO BEGIN WITH
+ORIGINAL PROMPT BELOW. NO CODE STRUCTURE TO BEGIN WITH
 #Build a class EmailAddressParser that accepts a string of unformatted 
 # emails. The parse method on the class should separate them into
 # unique email addresses. The delimiters to support are commas (',')
